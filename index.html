@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 521 | Web Server Is Down (beetlecode)</title>
+    <meta name="description" content="Error 521: beetlecode edge network resolved successfully, but the web server is unresponsive. Check diagnostics.">
+    <!-- Google Fonts: Inter for UI, Outfit for Headings, JetBrains Mono for diagnostics -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Scanlines and Grid -->
+    <div class="tech-grid"></div>
+    <div class="scanlines"></div>
+
+    <div class="main-container">
+        <!-- Header / Logo -->
+        <header class="header">
+            <div class="logo-container">
+                <img src="beetlecode.png" alt="beetlecode Logo" class="beetle-logo">
+                <span class="logo-text">beetle<span class="highlight">code</span></span>
+            </div>
+            <div class="status-badge">
+                <span class="badge-dot pulse-red-badge"></span>
+                <span class="badge-label text-red">Host Offline</span>
+            </div>
+        </header>
+
+        <!-- Main Card -->
+        <main class="error-card">
+            <!-- Glow effect behind the card -->
+            <div class="card-glow"></div>
+
+            <div class="card-content">
+                <div class="error-header">
+                    <div class="error-tag">Error Code: 521</div>
+                    <h1 class="error-title">Web Server Is Down</h1>
+                    <p class="error-desc">
+                        Our Edge Network successfully resolved your request, but the **beetlecode origin server** refused the connection (TCP handshake failed).
+                    </p>
+                </div>
+
+                <!-- Connection Path Widget -->
+                <div class="connection-widget">
+                    <h3 class="widget-title">Connection Diagnostic Flow</h3>
+                    
+                    <div class="network-path">
+                        <!-- Node 1: Browser -->
+                        <div class="network-node active">
+                            <div class="node-icon-wrapper">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                            </div>
+                            <span class="node-label">Your Browser</span>
+                            <span class="node-status text-green">Working</span>
+                        </div>
+
+                        <!-- Link 1 -->
+                        <div class="network-link link-active">
+                            <div class="link-line"></div>
+                            <div class="link-pulse"></div>
+                        </div>
+
+                        <!-- Node 2: CDN Edge -->
+                        <div class="network-node active">
+                            <div class="node-icon-wrapper">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                                </svg>
+                            </div>
+                            <span class="node-label">Edge Network</span>
+                            <span class="node-status text-green">Working</span>
+                        </div>
+
+                        <!-- Link 2 -->
+                        <div class="network-link link-error">
+                            <div class="link-line"></div>
+                            <div class="link-alert-pulse"></div>
+                        </div>
+
+                        <!-- Node 3: Server -->
+                        <div class="network-node offline">
+                            <div class="node-icon-wrapper">
+                                <div class="error-halo"></div>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                                </svg>
+                            </div>
+                            <span class="node-label">beetlecode Origin</span>
+                            <span class="node-status text-red">Host Offline</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloudflare Info Columns -->
+                <div class="info-grid">
+                    <div class="info-column">
+                        <h4 class="info-col-title">What Happened?</h4>
+                        <p class="info-col-text">
+                            Our edge protection proxy received your connection request and attempted to tunnel the traffic to beetlecode's backend web cluster. However, the origin server rejected the TCP connection. This usually happens when the web application daemon (like Nginx, Apache, or PM2) is not running, or server security rules are blocking proxy nodes.
+                        </p>
+                    </div>
+                    <div class="info-column">
+                        <h4 class="info-col-title">What Can I Do?</h4>
+                        <div class="info-sub-item">
+                            <span class="sub-badge">If you are a visitor:</span>
+                            <p class="info-col-text">
+                                The site itself is temporarily unavailable. The team is likely actively investigating or running maintenance. Please try reloading the page shortly or contact our support team.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <!-- Static Control Buttons -->
+                <div class="control-panel">
+                    <a href="" class="btn btn-primary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+                        </svg>
+                        Reload Page
+                    </a>
+
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 beetlecode. Security and acceleration powered by beetlecode Shield.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <span class="separator">&middot;</span>
+                <a href="#support">Support Portal</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
